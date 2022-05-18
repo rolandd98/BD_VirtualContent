@@ -1,0 +1,18 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[sub_resource type="GDScript" id=1]
+script/source = "tool
+extends Resource
+class_name ColourSettings
+
+export var planet_colour : Color setget set_colour
+
+func set_colour(val):
+	planet_colour = val
+	emit_signal(\"changed\")
+
+"
+
+[resource]
+script = SubResource( 1 )
+planet_colour = Color( 0.262745, 0.443137, 0.25098, 1 )

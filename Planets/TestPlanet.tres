@@ -1,0 +1,46 @@
+[gd_resource type="Resource" load_steps=10 format=2]
+
+[ext_resource path="res://Scripts/PlanetSettings.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/BiomesSettings.gd" type="Script" id=2]
+[ext_resource path="res://Scripts/PlanetNoise.gd" type="Script" id=3]
+
+[sub_resource type="OpenSimplexNoise" id=1]
+
+[sub_resource type="Gradient" id=7]
+offsets = PoolRealArray( 0, 0.20098, 1 )
+colors = PoolColorArray( 0, 0, 0, 1, 0.00683594, 0.0046463, 0.0046463, 1, 0.199219, 0.135406, 0.135406, 1 )
+
+[sub_resource type="GradientTexture" id=8]
+gradient = SubResource( 7 )
+
+[sub_resource type="Resource" id=4]
+script = ExtResource( 2 )
+gradient = SubResource( 8 )
+start_height = 0.0
+
+[sub_resource type="OpenSimplexNoise" id=5]
+seed = 314
+period = 88.3942
+
+[sub_resource type="Resource" id=6]
+script = ExtResource( 3 )
+is_enabled = true
+amplitude = 1.0
+min_height = 0.0
+layers = 1
+use_first_layer_as_mask = false
+strength = 1.0
+roughness = 1.0
+centre = Vector3( 0, 0, 0 )
+noise_map = SubResource( 5 )
+
+[resource]
+script = ExtResource( 1 )
+radius = 4.0
+resolution = 10
+planet_noise = [ SubResource( 6 ) ]
+biomes = [ SubResource( 4 ) ]
+biome_noise = SubResource( 1 )
+biome_amplitude = 0.0
+biome_offset = 0.0
+biome_blend = 0.0

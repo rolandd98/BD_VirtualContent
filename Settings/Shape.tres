@@ -1,0 +1,19 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[sub_resource type="GDScript" id=1]
+script/source = "tool
+extends Resource
+
+class_name ShapeSettings
+
+export var planet_radius := 1.0 setget set_radius
+
+func set_radius(val):
+	planet_radius = val
+	emit_signal(\"changed\")
+	
+"
+
+[resource]
+script = SubResource( 1 )
+planet_radius = 2.333

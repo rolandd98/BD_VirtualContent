@@ -1,0 +1,30 @@
+[gd_resource type="Environment" load_steps=4 format=2]
+
+[ext_resource path="res://proceduralsky_space.tres" type="ProceduralSky" id=1]
+
+[sub_resource type="Gradient" id=3]
+offsets = PoolRealArray( 0, 0.169118, 0.897059, 1 )
+colors = PoolColorArray( 0, 0, 0, 1, 0.141176, 0.141176, 0.141176, 1, 0.765625, 0.765625, 0.765625, 1, 1, 1, 1, 1 )
+
+[sub_resource type="GradientTexture" id=4]
+gradient = SubResource( 3 )
+
+[resource]
+background_mode = 2
+background_sky = ExtResource( 1 )
+ambient_light_color = Color( 0.505882, 0.505882, 0.505882, 1 )
+ambient_light_energy = 1.4
+ambient_light_sky_contribution = 0.2
+fog_sun_amount = 0.85
+fog_depth_begin = 41.3
+fog_depth_end = 183.3
+tonemap_mode = 3
+tonemap_exposure = 0.79
+tonemap_white = 1.61
+ss_reflections_max_steps = 89
+ssao_enabled = true
+ssao_intensity = 2.0
+ssao_light_affect = 0.59
+glow_intensity = 3.35
+glow_strength = 0.58
+adjustment_color_correction = SubResource( 4 )

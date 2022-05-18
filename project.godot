@@ -1,0 +1,59 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "Resource",
+"class": "BiomesSettings",
+"language": "GDScript",
+"path": "res://Scripts/BiomesSettings.gd"
+}, {
+"base": "Spatial",
+"class": "Planet",
+"language": "GDScript",
+"path": "res://Scripts/Planet.gd"
+}, {
+"base": "Resource",
+"class": "PlanetNoise",
+"language": "GDScript",
+"path": "res://Scripts/PlanetNoise.gd"
+}, {
+"base": "Resource",
+"class": "PlanetSettings",
+"language": "GDScript",
+"path": "res://Scripts/PlanetSettings.gd"
+}, {
+"base": "Resource",
+"class": "ShapeGenerator",
+"language": "GDScript",
+"path": "res://Scripts/ShapeGenerator.gd"
+}, {
+"base": "MeshInstance",
+"class": "TerrainFace",
+"language": "GDScript",
+"path": "res://Scripts/TerrainFace.gd"
+} ]
+_global_script_class_icons={
+"BiomesSettings": "",
+"Planet": "",
+"PlanetNoise": "",
+"PlanetSettings": "",
+"ShapeGenerator": "",
+"TerrainFace": ""
+}
+
+[application]
+
+config/name="pcg_planet"
+run/main_scene="res://Main.tscn"
+config/icon="res://icon.png"
+
+[physics]
+
+common/enable_pause_aware_picking=true
