@@ -1,6 +1,6 @@
 tool
 extends Resource
-class_name BiomesSettings
+class_name BiomeSettings
 
 export var gradient : GradientTexture setget set_gradient
 export var start_height : float setget set_start_height

@@ -52,7 +52,9 @@ func regenerate_mesh(PlanetSettings : PlanetSettings, objectType : int):
 			var pointOnUnitCube : Vector3 = local_up + (percent.x-0.5) * 2.0 * axisA + (percent.y-0.5) * 2.0 * axisB
 			var pointOnUnitSphere := pointOnUnitCube.normalized()
 			#calculating biome index based on pointOnUnitSphere
-			var biome_index = PlanetSettings.biome_percent_from_point(pointOnUnitSphere)
+			
+			#var biome_index = PlanetSettings.biome_percent_from_point(pointOnUnitSphere)
+			var biome_index = BiomeGenerator.biome_percent_from_point(pointOnUnitSphere, PlanetSettings)
 
 			#calculating point on planet
 			var pointOnPlanet := ShapeGenerator.calculate_point_on_planet(PlanetSettings, pointOnUnitSphere)
@@ -83,9 +85,9 @@ func regenerate_mesh(PlanetSettings : PlanetSettings, objectType : int):
 			#vertex_array[i] = pointOnUnitSphere
 			vertex_array[i] = pointOnObject
 			
-			#TOLEARN
+
 			uv_array[i] = Vector2(0.0, biome_index)
-			#TOLEARN
+
 			var l = pointOnPlanet.length()
 			if l < PlanetSettings.min_height:
 				PlanetSettings.min_height = l
@@ -140,6 +142,7 @@ func _update_mesh(arrays : Array, PlanetSettings : PlanetSettings):
 
 	material_override.set_shader_param("min_height", PlanetSettings.min_height)
 	material_override.set_shader_param("max_height", PlanetSettings.max_height)
-	material_override.set_shader_param("height_color", PlanetSettings.update_biome_texture())
+	#material_override.set_shader_param("height_color", PlanetSettings.update_biome_texture())
+	material_override.set_shader_param("height_color", BiomeGenerator.update_biome_texture(PlanetSettings))
 
 	

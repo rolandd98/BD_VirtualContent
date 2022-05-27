@@ -41,28 +41,28 @@ gradient = SubResource( 19 )
 start_height = 0.707
 
 [sub_resource type="OpenSimplexNoise" id=20]
-seed = 198972
+seed = 19589
 octaves = 7
-period = 20.8852
-persistence = 0.311847
-lacunarity = 0.410492
+period = 24.8444
+persistence = 0.238977
+lacunarity = 2.39039
 
 [sub_resource type="Resource" id=21]
 script = ExtResource( 3 )
 is_enabled = true
-amplitude = 0.426
-min_height = 0.32
+amplitude = 0.4
+min_height = 0.304
 use_first_layer_as_mask = false
-strength = 3.7663
+strength = 3.38674
 centre = Vector3( 0, 2.767, 0 )
 noise_map = SubResource( 20 )
 
 [sub_resource type="OpenSimplexNoise" id=27]
-seed = 865860
+seed = 462439
 octaves = 5
-period = 75.8168
-persistence = 0.283821
-lacunarity = 1.17631
+period = 58.7732
+persistence = 0.456757
+lacunarity = 1.76137
 
 [sub_resource type="Resource" id=28]
 script = ExtResource( 3 )
@@ -70,17 +70,17 @@ is_enabled = false
 amplitude = 9.417
 min_height = 5.366
 use_first_layer_as_mask = true
-strength = 0.184357
+strength = 0.539505
 centre = Vector3( 0, -0.535, 0 )
 noise_map = SubResource( 27 )
 
 [resource]
 script = ExtResource( 1 )
-radius = 4.043
-resolution = 200
+radius = 4.009
+resolution = 300
 planet_noise = [ SubResource( 21 ), SubResource( 28 ) ]
 biomes = [ SubResource( 22 ), SubResource( 25 ), SubResource( 26 ) ]
 biome_noise = SubResource( 15 )
 biome_amplitude = 0.194
-biome_offset = 0.414
+biome_offset = 0.453
 biome_blend = 0.462

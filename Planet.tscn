@@ -3,7 +3,7 @@
 [ext_resource path="res://Scripts/Planet.gd" type="Script" id=1]
 [ext_resource path="res://Scripts/TerrainFace.gd" type="Script" id=2]
 [ext_resource path="res://Planets/EarthLikePlanetSettingsWithDesert.tres" type="Resource" id=3]
-[ext_resource path="res://Planets/PlanetsMaterials/PlanetMaterial.tres" type="Material" id=5]
+[ext_resource path="res://Planets/PlanetsMaterials/PlanetMaterial_3.tres" type="Material" id=5]
 
 [sub_resource type="ArrayMesh" id=1]
 surfaces/0 = {

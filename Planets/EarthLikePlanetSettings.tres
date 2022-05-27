@@ -1,6 +1,6 @@
 [gd_resource type="Resource" load_steps=10 format=2]
 
-[ext_resource path="res://Scripts/BiomesSettings.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/BiomeSettings.gd" type="Script" id=1]
 [ext_resource path="res://Scripts/PlanetNoise.gd" type="Script" id=2]
 [ext_resource path="res://Scripts/PlanetSettings.gd" type="Script" id=3]
 

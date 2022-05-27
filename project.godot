@@ -10,9 +10,14 @@ config_version=4
 
 _global_script_classes=[ {
 "base": "Resource",
-"class": "BiomesSettings",
+"class": "BiomeGenerator",
 "language": "GDScript",
-"path": "res://Scripts/BiomesSettings.gd"
+"path": "res://Scripts/BiomeGenerator.gd"
+}, {
+"base": "Resource",
+"class": "BiomeSettings",
+"language": "GDScript",
+"path": "res://Scripts/BiomeSettings.gd"
 }, {
 "base": "Spatial",
 "class": "Planet",
@@ -40,7 +45,8 @@ _global_script_classes=[ {
 "path": "res://Scripts/TerrainFace.gd"
 } ]
 _global_script_class_icons={
-"BiomesSettings": "",
+"BiomeGenerator": "",
+"BiomeSettings": "",
 "Planet": "",
 "PlanetNoise": "",
 "PlanetSettings": "",
